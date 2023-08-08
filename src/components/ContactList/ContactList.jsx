@@ -6,7 +6,7 @@ const ContactList = ({ contacts, onDeleteBtn }) => {
   return (
     <List>
       {contacts.map(contact => {
-        const {id} = contact;
+        // const {id} = contact;
         return (
           <Item key={contact.id}>
             <span>{contact.name}</span>
