@@ -1,26 +1,27 @@
 import PropTypes from 'prop-types';
+import { Input } from 'components/ContacForm/ContactForm.styled';
 // import { Component } from 'react';
 import React from 'react';
-import { FilterLabel, FilterInput } from './Filter.styled';
+import { FilterLabel} from './Filter.styled';
 
 const Filter = ({ filter, onFilter }) => {
-  render()
-  {
-    const { filter, onFilter } = this.props;
+  // render()
+  // {
+    // const { filter, handleFilter } = this.props;
 
     return (
-      <FilterLabel>
-        Find contacts by name
-        <FilterInput type="text" onChange={onFilter} value={filter} />
-      </FilterLabel>
+      <>
+        <FilterLabel>Find contacts by name</FilterLabel>
+        <Input type="text" onChange={onFilter} value={filter} id="filter" />
+      </>
     );
   }
-}
+// }
 
   export default Filter;
 
   Filter.propTypes = {
     onFilter: PropTypes.func.isRequired,
     filter: PropTypes.string,
-  }
+  };
   
