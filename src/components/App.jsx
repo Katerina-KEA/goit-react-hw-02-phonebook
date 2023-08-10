@@ -14,9 +14,9 @@ class App extends Component {
     filter: '',
   };
 
-  handleAddContact = contacts => {
-    const { contact } = this.state;
-    const { name } = name;
+  handleAddContact = contact => {
+    const { contacts } = this.state;
+    const { name } = contact;
 
     // Для перевірки існуючого контакту використовуйте патерн "раннє повернення"
     // if (isExist) {
@@ -74,7 +74,7 @@ class App extends Component {
         <ContactList
           contacts={filteredContacts}
           filter={filter}
-          onDeleteBtn={this.onDeleteBtn}
+          onDeleteBtn={this.handleDeleteContact}
         />
       </div>
     );
